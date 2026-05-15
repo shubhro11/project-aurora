@@ -2,7 +2,6 @@ const userModel = require("../models/user.model");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-
 /* Register Controller */
 async function registerUser(req, res) {
   const {
@@ -69,7 +68,8 @@ async function loginUser(req, res) {
   });
 }
 
-/* logout Controller */
+
+/* Logout Controller */
 async function logoutUser(req, res) {
   try {
     res.clearCookie("token", {
@@ -89,6 +89,7 @@ async function logoutUser(req, res) {
     });
   }
 }
+
 
 /* getCurrentUser Controller */
 async function getCurrentUser(req, res) {

@@ -16,6 +16,7 @@ router.get("/getChats", authMiddleware.authUser, chatController.getChats)
 /* DELETE /delete/:id */
 router.delete("/delete-chat/:id", authMiddleware.authUser, chatController.deleteChat)
 
+
 /* GET /api/chat/message/:id */
 router.get("/message/:id", authMiddleware.authUser, chatController.getMessages)
 
