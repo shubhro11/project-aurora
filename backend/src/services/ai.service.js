@@ -1,0 +1,16 @@
+const { GoogleGenAI } = require("@google/genai");
+
+const ai = new GoogleGenAI({});
+
+/* Generate AI response */
+async function generateResponse(content) {
+  const response = await ai.models.generateContent({
+    model: "gemini-3.1-flash-lite",
+    contents: content
+  });
+  return response.text;
+}
+
+module.exports = {
+  generateResponse
+};
