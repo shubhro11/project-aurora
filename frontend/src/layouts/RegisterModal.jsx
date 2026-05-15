@@ -37,7 +37,7 @@ const RegisterModal = () => {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-(--color-surface-container-lowest) lg:p-4">
 
       {/* Modal Box */}
-      <div className="grid max-h-[95vh] w-[95%] grid-cols-12 overflow-hidden rounded-lg bg-(--color-surface-container-low) shadow-lg sm:w-120 md:w-[95%] lg:w-[95%] xl:w-340">
+      <div className="grid max-h-[95vh] w-[95%] grid-cols-12 overflow-hidden rounded-lg border border-(--color-surface-container-high) bg-(--color-surface-container-low) shadow-lg sm:w-120 md:w-[95%] lg:w-[95%] xl:w-340">
 
         {/* Left Banner */}
         <div className="relative hidden h-full bg-black bg-cover bg-center bg-no-repeat backdrop-blur-xl md:col-span-6 lg:col-span-7 xl:col-span-8 md:flex lg:items-end">

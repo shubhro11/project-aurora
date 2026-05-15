@@ -102,7 +102,7 @@ const RecentChats = ({ mobileSidebarOpen, setMobileSidebarOpen, openDeleteModal,
                   <li
                     key={c._id}
                     onClick={() => handleButtonClick(c)}
-                    className={`relative flex cursor-pointer items-center justify-between rounded p-3 text-sm transition-colors duration-200 ${
+                    className={`relative flex border border-(--color-surface-container-high) cursor-pointer items-center justify-between rounded p-3 text-sm transition-colors duration-200 ${
                       String(c._id) === String(activeChatId)
                         ? "bg-(--color-surface-container-highest) text-(--color-tertiary-fixed)" // active state
                         : "bg-(--color-surface-container) text-(--color-on-surface) hover:bg-(--color-surface-container)"
@@ -132,7 +132,7 @@ const RecentChats = ({ mobileSidebarOpen, setMobileSidebarOpen, openDeleteModal,
                     {openMenuId === c._id && (
                       <div
                         onClick={(e) => e.stopPropagation()}
-                        className="menu-container absolute top-11 right-3 z-50 w-32 flex justify-center rounded bg-zinc-900 shadow-xl"
+                        className="menu-container border border-(--color-surface-container-high) absolute top-11 right-3 z-50 w-32 flex justify-center rounded bg-zinc-900 shadow-xl"
                       >
                         
 

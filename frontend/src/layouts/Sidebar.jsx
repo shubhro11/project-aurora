@@ -70,7 +70,7 @@ const Sidebar = ({
 
       <aside
         onClick={(e) => e.stopPropagation()}
-        className={`absolute z-10 flex h-screen w-65 shrink-0 flex-col items-center bg-(--color-surface-container-low) px-4 py-5 transition-transform duration-200 lg:transition-[width] ${
+        className={`absolute z-10 flex h-screen w-65 shrink-0 flex-col border-r border-(--color-surface-container-high) items-center bg-(--color-surface-container-low) px-4 py-5 transition-transform duration-400 lg:transition-[width] ${
           mobileSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } lg:static lg:translate-x-0 ${desktopCollapsed ? "lg:w-17" : "lg:w-67"} `}
       >
@@ -83,17 +83,7 @@ const Sidebar = ({
                     className="cursor-pointer transition-colors duration-200 text-[#DEE5FF]"
                     onClick={handleSidebarToggle}
                   >
-                    {window.innerWidth >= 1024 ? (
-                      desktopCollapsed ? (
-                        <TextAlignJustify size={28} />
-                      ) : (
-                        <TextAlignJustify size={28} />
-                      )
-                    ) : mobileSidebarOpen ? (
-                      <TextAlignJustify size={28} />
-                    ) : (
-                      <X size={28} />
-                    )}
+                    {window.innerWidth >= 1024 ? desktopCollapsed ? (<TextAlignJustify size={28} />) : (<TextAlignJustify size={28} />) : mobileSidebarOpen ? <TextAlignJustify size={28} /> : <TextAlignJustify size={28} />}
                   </span>
                 </div>
               </div>
@@ -103,7 +93,7 @@ const Sidebar = ({
                 className="flex cursor-pointer items-center justify-center rounded bg-(--color-primary-container) p-2 text-(--color-on-primary-container) transition-colors duration-200 hover:bg-(--color-secondary-container) hover:text-(--color-on-secondary-container)"
               >
                 <div
-                  className={`flex items-center transition-all duration-200 ${
+                  className={`flex items-center transition-all duration-400 ${
                     desktopCollapsed
                       ? "lg:justify-center"
                       : "lg:justify-left gap-1"
@@ -113,7 +103,7 @@ const Sidebar = ({
                     <Plus size={20} />
                   </span>
                   <span
-                    className={`max-w-35 overflow-hidden leading-none whitespace-nowrap opacity-100 transition-all duration-200 ${
+                    className={`max-w-35 overflow-hidden leading-none whitespace-nowrap opacity-100 transition-all duration-400 ${
                       desktopCollapsed
                         ? "lg:max-w-0 lg:opacity-0"
                         : "lg:ml-1 lg:max-w-35 lg:opacity-100"
@@ -130,7 +120,7 @@ const Sidebar = ({
                 desktopCollapsed
                   ? "lg:max-w-0 lg:opacity-0"
                   : "lg:max-w-125 lg:opacity-100"
-              } transition-all duration-200`}
+              } transition-all duration-400`}
             >
               <RecentChats
                 mobileSidebarOpen={mobileSidebarOpen}

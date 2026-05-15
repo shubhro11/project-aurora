@@ -21,7 +21,7 @@ const Message = ({ message }) => {
         className={`mt-1 rounded-md ${
           message.role === "user"
             ? "w-fit max-w-135 rounded-br-sm bg-(--color-on-primary-fixed-variant) px-4 py-3 text-(--color-on-primary-container) "
-            : "w-fit max-w-full rounded-bl-sm bg-(--color-surface-container) px-4 py-4 text-(--color-on-surface)"
+            : "w-fit max-w-full rounded-bl-sm border border-(--color-surface-container-high) bg-(--color-surface-container) px-4 py-4 text-(--color-on-surface)"
         }`}
       >
         {message.role === "model" ? (

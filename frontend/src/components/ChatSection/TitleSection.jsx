@@ -63,10 +63,10 @@ const TitleSection = ({
   }
 
   return (
-    <div className="flex w-full items-center justify-between bg-(--color-surface) p-5 transition-colors duration-200">
+    <div className="flex w-full items-center border-b border-(--color-surface-container-high) justify-between bg-(--color-surface) p-5 transition-colors duration-200">
       <span
         onClick={toggleMobileSidebar}
-        className="text-[#272E42] cursor-pointer transition-colors duration-200 lg:hidden dark:text-[#DEE5FF]"
+        className="cursor-pointer transition-colors duration-200 lg:hidden text-[#DEE5FF]"
       >
         {/* <PanelLeftOpen size={38} strokeWidth={1.5} /> */}
         <TextAlignJustify size={24} />

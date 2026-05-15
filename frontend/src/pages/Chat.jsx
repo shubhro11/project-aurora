@@ -4,10 +4,12 @@ import { Outlet, useNavigate } from "react-router-dom";
 
 import { currentUserThunk } from "../store/reducers/authSlice.jsx";
 
+
 import InputSection from "../components/ChatSection/InputSection";
 import TitleSection from "../components/ChatSection/TitleSection";
 import Sidebar from "../layouts/Sidebar.jsx";
 import DeleteChatModal from "../components/SidebarSection/DeleteChatModal.jsx";
+import { Plus } from "lucide-react";
 
 const Chat = () => {
   const dispatch = useDispatch();
@@ -69,9 +71,12 @@ const Chat = () => {
                 <h1 className="text-center text-5xl font-medium text-(--color-on-tertiary-container) transition-colors duration-200">
                   Welcome to Aurora AI
                 </h1>
-                <p className="mt-2 max-w-md text-center text-sm text-(--color-tertiary-fixed) transition-colors duration-200">
-                  Your chats stay in the sidebar so you can pick
-                  up where you left.
+                <p className="mt-2 max-w-md text-center  text-sm text-(--color-tertiary-fixed) transition-colors duration-200"> 
+                  <span>Click on </span> 
+                  +
+                  <span> to create a New chat. Your chats stay in the sidebar, so you can pick
+                  up where you left.</span> 
+                  
                 </p>
               </div>
             )}
