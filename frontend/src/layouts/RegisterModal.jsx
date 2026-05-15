@@ -91,7 +91,7 @@ const RegisterModal = () => {
                 <h1 className="text-center text-2xl font-bold font-(family-name:--font-heading) text-(--color-on-tertiary-container)">
                   Create an account
                 </h1>
-                <p className="mt-1 text-center text-xs font-(family-name:--font-body) text-(--color-tertiary-fixed-dim) opacity-60">
+                <p className="mt-1 text-center text-xs font-(family-name:--font-body) text-(--color-tertiary-container)">
                   Fill in the details below to create your account
                 </p>
               </div>

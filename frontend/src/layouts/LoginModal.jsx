@@ -91,7 +91,7 @@ const LoginModal = () => {
                 <h1 className="text-center font-(family-name:--font-heading) text-2xl font-bold text-(--color-on-tertiary-container) transition-colors duration-200">
                   Welcome Back
                 </h1>
-                <p className="mt-1 text-center font-(family-name:--font-body) text-xs text-(--color-tertiary-fixed-dim) opacity-60">
+                <p className="mt-1 text-center font-(family-name:--font-body) text-xs text-(--color-tertiary-container)">
                   Please login to your account
                 </p>
               </div>

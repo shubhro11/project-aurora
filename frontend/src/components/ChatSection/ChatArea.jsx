@@ -76,7 +76,7 @@ const ChatArea = () => {
             <Quantum
                 size="40"
                 speed="1.3"
-                color="var(--color-tertiary-fixed-dim)"
+                color="#D1FFEA"
               />
 
               <div className="flex flex-col gap-1 opacity-40">

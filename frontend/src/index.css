@@ -4,8 +4,6 @@
   --breakpoint-xs: 480px;
 }
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 .custom-burger .hamburger-inner,
 .custom-burger .hamburger-inner::before,
 .custom-burger .hamburger-inner::after {

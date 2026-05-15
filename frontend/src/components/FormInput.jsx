@@ -60,19 +60,19 @@ const FormInput = ({
         className={`flex items-center ${forgetPassword ? "justify-between" : "justify-end"}`}
       >
         <span
-          className={`${forgetPassword ? "block" : "hidden"} text-sm leading-none text-(--color-tertiary-container) hover:underline`}
+          className={`${forgetPassword ? "block" : "hidden"} text-sm leading-none text-(--color-tertiary) hover:underline`}
         >
           <small className="leading-none font-(family-name:--font-body) cursor-pointer">forget password?</small>
         </span>
 
         <div className="item-center flex gap-0.5">
           <span
-            className={`${hasError ? "opacity-100" : "opacity-0"} text-sm leading-none text-(--color-error) transition-all duration-200`}
+            className={`${hasError ? "opacity-100" : "opacity-0"} text-sm leading-none text-[#FF6E84] transition-all duration-200`}
           >
             {errorMessageIcon}
           </span>
           <span
-            className={`${hasError ? "opacity-100" : "opacity-0"} text-xs leading-none font-(family-name:--font-body) text-(--color-error) transition-all duration-200`}
+            className={`${hasError ? "opacity-100" : "opacity-0"} text-xs leading-none font-(family-name:--font-body) text-[#FF6E84] transition-all duration-200`}
           >
             {errorMessage}
           </span>

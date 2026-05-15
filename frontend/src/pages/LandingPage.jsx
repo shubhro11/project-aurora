@@ -37,7 +37,7 @@ const LandingPage = () => {
               Next-Gen Intelligence
             </span>
             <h1 className="w-[90%] text-center text-2xl md:text-4xl font-bold text-(--color-on-tertiary-container) md:w-full">
-              Welcome to Aurora AI
+              Welcome to Aurora
             </h1>
 
             <span className="w-full text-sm lg:text-base text-center text-(--color-on-tertiary-container)">

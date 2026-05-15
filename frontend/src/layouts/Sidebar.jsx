@@ -70,9 +70,9 @@ const Sidebar = ({
 
       <aside
         onClick={(e) => e.stopPropagation()}
-        className={`absolute z-10 flex h-screen w-65 shrink-0 flex-col border-r border-(--color-surface-container-high) items-center bg-(--color-surface-container-low) px-4 py-5 transition-transform duration-400 lg:transition-[width] ${
+        className={`absolute z-10 flex h-screen w-65 shrink-0 flex-col border-r border-(--color-surface-container-high) items-center bg-(--color-surface-container-low) p-6 transition-transform duration-400 lg:transition-[width] ${
           mobileSidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } lg:static lg:translate-x-0 ${desktopCollapsed ? "lg:w-17" : "lg:w-67"} `}
+        } lg:static lg:translate-x-0 ${desktopCollapsed ? "lg:w-22" : "lg:w-67"} `}
       >
         <div className="flex h-full w-full flex-col justify-between">
           <div className="flex w-full flex-col gap-6">
@@ -83,14 +83,14 @@ const Sidebar = ({
                     className="cursor-pointer transition-colors duration-200 text-[#DEE5FF]"
                     onClick={handleSidebarToggle}
                   >
-                    {window.innerWidth >= 1024 ? desktopCollapsed ? (<TextAlignJustify size={28} />) : (<TextAlignJustify size={28} />) : mobileSidebarOpen ? <TextAlignJustify size={28} /> : <TextAlignJustify size={28} />}
+                    {window.innerWidth >= 1024 ? desktopCollapsed ? (<TextAlignJustify size={30} />) : (<TextAlignJustify size={30} />) : mobileSidebarOpen ? <TextAlignJustify size={28} /> : <TextAlignJustify size={28} />}
                   </span>
                 </div>
               </div>
 
               <button
                 onClick={createChat}
-                className="flex cursor-pointer items-center justify-center rounded bg-(--color-primary-container) p-2 text-(--color-on-primary-container) transition-colors duration-200 hover:bg-(--color-secondary-container) hover:text-(--color-on-secondary-container)"
+                className="flex cursor-pointer items-center justify-center rounded bg-(--color-primary-container) px-2 py-2.5 text-(--color-on-primary-container) transition-colors duration-200 hover:bg-(--color-secondary-container) hover:text-(--color-on-secondary-container)"
               >
                 <div
                   className={`flex items-center transition-all duration-400 ${

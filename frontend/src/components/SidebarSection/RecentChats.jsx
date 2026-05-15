@@ -109,8 +109,8 @@ const RecentChats = ({ mobileSidebarOpen, setMobileSidebarOpen, openDeleteModal,
                     } `}
                   >
                     <span className="overflow-hidden">
-                      {c.title.length > 24
-                        ? `${c.title.slice(0, 24)}...`
+                      {c.title.length > 21
+                        ? `${c.title.slice(0, 21)}...`
                         : `${c.title}`}
                     </span>
 

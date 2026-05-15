@@ -48,7 +48,7 @@ const DeleteChatModal = ({ onClose }) => {
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-xs"
     >
       {/* Delete Modal */}
-      <div className="relative border border-(--color-surface-container) flex w-80 flex-col items-center gap-4 rounded-lg bg-(--color-surface-container-lowest) p-6 pt-8">
+      <div className="relative border border-(--color-surface-container) flex w-80 flex-col items-center gap-4 rounded-lg bg-(--color-surface) p-6 pt-8">
 
         <span onClick={onClose}
          className="absolute top-4 right-4 cursor-pointer pt-0.5 leading-none text-(--color-tertiary-fixed) transition-all duration-200">
@@ -72,7 +72,7 @@ const DeleteChatModal = ({ onClose }) => {
           <button
             disabled={loading}
             onClick={deleteChatHandler}
-            className={`${loading ? "cursor-not-allowed bg-[#6f6e81] text-[#c3c5ca]" : "bg-red-600 font-(family-name:--font-body) text-white hover:bg-red-700 cursor-pointer"} w-full rounded text-sm transition-colors duration-200`}
+            className={`${loading ? "cursor-not-allowed bg-[#6f6e81] text-[#c3c5ca]" : "text-red-400 font-(family-name:--font-body) hover:bg-(--color-error) hover:text-(--color-on-error) cursor-pointer"} w-full rounded text-sm transition-colors duration-200`}
           >
             {loading
               ? "Deleting chat" : "Yes, delete it"}
