@@ -1,6 +1,7 @@
 const cookie = require("cookie");
 const jwt = require("jsonwebtoken");
 
+const { Server } = require("socket.io");
 const { createMemory, queryMemory } = require("../services/vector.service");
 const { removeGreeting, isLowIntentMessage } = require("../utils/text.utils");
 
@@ -11,6 +12,14 @@ const chatModel = require("../models/chat.model");
 const aiService = require("../services/ai.service");
 
 function initSocketServer(httpServer) {
+
+  const io = new Server(httpServer, {
+    cors: {
+      origin: "http://localhost:5173",
+      allowedHeaders: ["Content-Type", "Authorization"],
+      credentials: true,
+    },
+  });
     
   /* Socket Middleware */
   io.use(async (socket, next) => {

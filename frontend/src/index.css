@@ -1,0 +1,282 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-xs: 480px;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.custom-burger .hamburger-inner,
+.custom-burger .hamburger-inner::before,
+.custom-burger .hamburger-inner::after {
+  background-color: #4f46e5; /* Tailwind indigo-600 */
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  caret-color: var(--color-on-surface);
+  -webkit-text-fill-color: var(--color-on-surface) !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.dark input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: var(--color-on-surface) !important;
+}
+
+.scrollbar-custom::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: rgba(148, 163, 184, 0.3); /* subtle */
+  border-radius: 9999px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(148, 163, 184, 0.6);
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: rgba(148, 163, 184, 0.3);
+}
+
+.scrollbar-custom:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(148, 163, 184, 0.5);
+}
+
+:root {
+  /* SURFACE & BACKGROUND */
+  --color-surface: #0B0C10; /* Abyssal Black from icon edges */
+  --color-surface-dim: #0B0C10;
+  --color-surface-bright: #1B1F3B; /* Midnight Blue for elevation */
+
+  --color-surface-container-lowest: #050607;
+  --color-surface-container-low: #0B0C10;
+  --color-surface-container: #111418;
+  --color-surface-container-high: #1B1F3B;
+  --color-surface-container-highest: #242945;
+
+  --color-background: #0B0C10;
+  --color-surface-variant: #1B1F3B;
+
+  /* TEXT / FOREGROUND (ON COLORS) */
+  --color-on-surface: #F8F9FA; /* Starlight White for high legibility */
+  --color-on-surface-variant: #A0AEC0; /* Muted Slate Blue */
+
+  --color-on-primary: #00210E; 
+  --color-on-primary-container: #D1FFEA;
+
+  --color-on-secondary: #001F26;
+  --color-on-secondary-container: #CFFAFF;
+
+  --color-on-tertiary: #25103B;
+  --color-on-tertiary-container: #F3E5FF;
+
+  --color-on-error: #690005;
+  --color-on-error-container: #FFDAD6;
+
+  --color-on-background: #F8F9FA;
+
+  /* PRIMARY COLORS (Aurora Emerald) */
+  --color-primary: #2ECC71; 
+  --color-primary-container: #1E5031;
+
+  --color-primary-fixed: #A9FFD1;
+  --color-primary-fixed-dim: #2ECC71;
+
+  --color-on-primary-fixed: #00210E;
+  --color-on-primary-fixed-variant: #1E5031;
+
+  --color-inverse-primary: #1E5031;
+
+  --color-surface-tint: #2ECC71;
+
+  /* SECONDARY COLORS (Electric Cyan) */
+  --color-secondary: #00D4FF;
+  --color-secondary-container: #004F60;
+
+  --color-secondary-fixed: #B3F5FF;
+  --color-secondary-fixed-dim: #00D4FF;
+
+  --color-on-secondary-fixed: #002026;
+  --color-on-secondary-fixed-variant: #004F60;
+
+  /* TERTIARY COLORS (Cosmic Violet) */
+  --color-tertiary: #8E44AD;
+  --color-tertiary-container: #5B2C6F;
+
+  --color-tertiary-fixed: #E8D0F5;
+  --color-tertiary-fixed-dim: #8E44AD;
+
+  --color-on-tertiary-fixed: #25103B;
+  --color-on-tertiary-fixed-variant: #5B2C6F;
+
+  /* ERROR COLORS */
+  --color-error: #FFB4AB;
+  --color-error-container: #93000A;
+
+  /* BORDERS / OUTLINES */
+  --color-outline: #4A5568; /* Slate Blue from the icon shadows */
+  --color-outline-variant: #2D3748;
+
+  /* INVERSE COLORS  */
+  --color-inverse-surface: #F8F9FA;
+  --color-inverse-on-surface: #0B0C10;
+  
+
+  /* TOASTIFY COLOR */
+  /* TOASTIFY COLORS */
+
+  --color-success: #328f4e;
+  --color-on-success: var(--color-on-tertiary-container);
+
+  --color-error: #93000a;
+  --color-on-error: var(--color-on-tertiary-container);
+
+  --color-warning: #ff9800;
+  --color-on-warning: #000000;
+
+  --color-info: #1482dc;
+  --color-on-info: var(--color-on-tertiary-container);
+
+  /* Toastify overrides */
+
+  --toastify-color-success: var(--color-success);
+  --toastify-text-color-success: var(--color-on-success);
+
+  --toastify-color-error: var(--color-error);
+  --toastify-text-color-error: var(--color-on-error);
+
+  --toastify-color-warning: var(--color-warning);
+  --toastify-text-color-warning: var(--color-on-warning);
+
+  --toastify-color-info: var(--color-info);
+  --toastify-text-color-info: var(--color-on-info);
+
+  /* =========================================
+     TYPOGRAPHY
+  ========================================= */
+
+  /* Font Families */
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Headline XL */
+  --text-headline-xl-size: 64px;
+  --text-headline-xl-weight: 700;
+  --text-headline-xl-line-height: 1.1;
+  --text-headline-xl-letter-spacing: -0.02em;
+
+  /* Headline LG */
+  --text-headline-lg-size: 40px;
+  --text-headline-lg-weight: 600;
+  --text-headline-lg-line-height: 1.2;
+  --text-headline-lg-letter-spacing: -0.01em;
+
+  /* Headline MD */
+  --text-headline-md-size: 24px;
+  --text-headline-md-weight: 600;
+  --text-headline-md-line-height: 1.3;
+
+  /* Body LG */
+  --text-body-lg-size: 18px;
+  --text-body-lg-weight: 400;
+  --text-body-lg-line-height: 1.6;
+
+  /* Body MD */
+  --text-body-md-size: 16px;
+  --text-body-md-weight: 400;
+  --text-body-md-line-height: 1.5;
+
+  /* Label MD */
+  --text-label-md-size: 14px;
+  --text-label-md-weight: 500;
+  --text-label-md-line-height: 1.2;
+  --text-label-md-letter-spacing: 0.05em;
+
+  /* =========================================
+     RADIUS
+  ========================================= */
+  --radius-sm: 0.25rem;
+  --radius-default: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* =========================================
+     SPACING
+  ========================================= */
+  --space-base: 8px;
+  --space-xs: 4px;
+  --space-sm: 12px;
+  --space-md: 24px;
+  --space-lg: 48px;
+  --space-xl: 80px;
+
+  --space-gutter: 24px;
+  --space-margin: 32px;
+
+  /* =========================================
+     GLASSMORPHISM
+  ========================================= */
+  --glass-bg: rgba(31, 25, 36, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: 20px;
+
+  /* =========================================
+     BLOOM / GLOW
+  ========================================= */
+  --glow-primary: 0 0 30px rgba(221, 184, 255, 0.45);
+  --glow-secondary: 0 0 30px rgba(251, 171, 255, 0.45);
+  --glow-tertiary: 0 0 30px rgba(255, 175, 211, 0.45);
+
+  /* =========================================
+     BORDERS
+  ========================================= */
+  --border-subtle: 1px solid rgba(255, 255, 255, 0.08);
+  --border-glass: 1px solid rgba(255, 255, 255, 0.1);
+  --border-primary: 1px solid var(--color-primary);
+  --border-main: 1px soild rgba(152, 140, 161, 1)
+    /* =========================================
+     TRANSITIONS
+  ========================================= */
+  
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  /* =========================================
+     SHADOWS
+  ========================================= */
+  --shadow-card:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.1), 0 8px 32px rgba(0, 0, 0, 0.35);
+
+  --shadow-glass:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.12), 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.Toastify__toast--success {
+  background: var(--color-success) !important;
+  color: var(--color-on-success) !important;
+}
+
+.Toastify__toast--error {
+  background: var(--color-error) !important;
+  color: var(--color-on-error) !important;
+}
+
+.Toastify__toast--warning {
+  background: var(--color-warning) !important;
+  color: var(--color-on-warning) !important;
+}
+
+.Toastify__toast--info {
+  background: var(--color-info) !important;
+  color: var(--color-on-info) !important;
+}
