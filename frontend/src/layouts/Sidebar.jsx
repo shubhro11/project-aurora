@@ -70,7 +70,7 @@ const Sidebar = ({
 
       <aside
         onClick={(e) => e.stopPropagation()}
-        className={`absolute z-10 flex h-screen w-65 shrink-0 flex-col border-r border-(--color-surface-container-high) items-center bg-(--color-surface-container-low) p-6 transition-transform duration-400 lg:transition-[width] ${
+        className={`absolute z-10 flex h-screen w-67 shrink-0 flex-col border-r border-(--color-surface-container-high) items-center bg-(--color-surface-container-low) lg:bg-transparent p-6 transition-transform duration-400 lg:transition-[width] ${
           mobileSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } lg:static lg:translate-x-0 ${desktopCollapsed ? "lg:w-22" : "lg:w-67"} `}
       >

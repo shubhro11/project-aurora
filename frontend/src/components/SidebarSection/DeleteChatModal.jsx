@@ -48,14 +48,14 @@ const DeleteChatModal = ({ onClose }) => {
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-xs"
     >
       {/* Delete Modal */}
-      <div className="relative border border-(--color-surface-container) flex w-80 flex-col items-center gap-4 rounded-lg bg-(--color-surface) p-6 pt-8">
+      <div className="relative border border-(--color-surface-container-high) flex w-[90%] xs:w-85 flex-col items-center gap-4 rounded-lg bg-(--color-surface-container-low) p-6 pt-8">
 
         <span onClick={onClose}
          className="absolute top-4 right-4 cursor-pointer pt-0.5 leading-none text-(--color-tertiary-fixed) transition-all duration-200">
-          <X size={14} />
+          <X size={18} />
         </span>
 
-        <span className="text-red-600 ">
+        <span className="text-red-500">
           <TriangleAlert size={44} />
         </span>
 

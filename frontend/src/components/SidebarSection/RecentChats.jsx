@@ -105,18 +105,18 @@ const RecentChats = ({ mobileSidebarOpen, setMobileSidebarOpen, openDeleteModal,
                     className={`relative flex border border-(--color-surface-container-high) cursor-pointer items-center justify-between rounded p-3 text-sm transition-colors duration-200 ${
                       String(c._id) === String(activeChatId)
                         ? "bg-(--color-surface-container-highest) text-(--color-tertiary-fixed)" // active state
-                        : "bg-(--color-surface-container) text-(--color-on-surface) hover:bg-(--color-surface-container)"
+                        : "bg-transparent text-(--color-on-surface) hover:bg-(--color-surface-container-high)"
                     } `}
                   >
                     <span className="overflow-hidden">
-                      {c.title.length > 21
-                        ? `${c.title.slice(0, 21)}...`
+                      {c.title.length > 24
+                        ? `${c.title.slice(0, 24)}...`
                         : `${c.title}`}
                     </span>
 
                     <div
                       ref={menuRef}
-                      className="relative items-center gap-2 rounded-4xl px-0.5 py-1 hover:bg-(--color-surface-container-high)"
+                      className="relative items-center gap-2 rounded-4xl px-0.5 py-1 hover:bg-(--color-surface-container-high) transition-colors duration-200"
                     >
                       <span
                         onClick={(e) => {

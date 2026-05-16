@@ -41,8 +41,8 @@ const Chat = () => {
 
 
   return (
-    <div className="min-h-screen w-full">
-      <div className="relative flex">
+    <div className="min-h-screen w-full bg-[linear-gradient(343deg,#4a0e2a_0%,#2c0b3d_20%,#0b0a33_50%,#040407_85%)]">
+      <div className="relative flex bg-transparent">
         <Sidebar
           mobileSidebarOpen={mobileSidebarOpen}
           setMobileSidebarOpen={setMobileSidebarOpen}
@@ -52,7 +52,7 @@ const Chat = () => {
           setOpenDeleteModal={setOpenDeleteModal}
         />
 
-        <section className="flex h-screen w-full flex-col gap-2 bg-(--color-surface-container-lowest) transition-colors duration-200">
+        <section className="flex h-screen w-full flex-col bg-transparent transition-colors duration-200">
           <TitleSection
             mobileSidebarOpen={mobileSidebarOpen}
             setMobileSidebarOpen={setMobileSidebarOpen}

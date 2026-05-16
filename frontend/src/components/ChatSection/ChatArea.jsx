@@ -62,7 +62,7 @@ const ChatArea = () => {
   return (
     <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
       {allMessage.length > 0 ? (
-        <div className="scrollbar-custom w-full overflow-auto pl-1.5">
+        <div className="scrollbar-custom w-full overflow-auto scrollbar-gutter-both">
           <div className="mx-auto flex min-h-0 w-[90%] flex-col gap-6 overflow-y-auto py-4 md:w-180">
             <>
               {allMessage.map((message) => (
@@ -72,17 +72,17 @@ const ChatArea = () => {
             ))}
 
             {loading && (
-              <div className="flex gap-5">
+              <div className="w-full flex gap-5">
             <Quantum
                 size="40"
                 speed="1.3"
                 color="#D1FFEA"
               />
 
-              <div className="flex flex-col gap-1 opacity-40">
-                <h1 className="w-100 h-4 bg-gray-300 animate-pulse rounded-md"></h1>
-                 <p className="w-70 h-2 bg-gray-300 animate-pulse rounded-md"></p>
-                 <p className="w-65 h-2 bg-gray-300 animate-pulse rounded-md"></p>
+              <div className="w-full flex flex-col gap-2 opacity-40">
+                <h1 className="w-[85%] h-3 bg-gray-300 animate-pulse rounded-md"></h1>
+                 <p className="w-[70%] h-2.5 bg-gray-300 animate-pulse rounded-md"></p>
+                 <p className="w-[65%] h-2.5 bg-gray-300 animate-pulse rounded-md"></p>
               </div>
             </div>
             )}

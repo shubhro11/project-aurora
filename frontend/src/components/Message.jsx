@@ -13,15 +13,15 @@ const Message = ({ message }) => {
         message.role === "user" ? "items-end" : "items-start"
       }`}
     >
-      <small className="text-[0.7rem] leading-none text-(--color-on-surface-variant) uppercase opacity-70">
+      <small className={`text-[0.7rem] px-2 leading-none text-slate-300 font-medium tracking-wide uppercase opacity-80`}>
         {message.role === "user" ? "You" : "Aurora"}
       </small>
 
       <div
         className={`mt-1 rounded-md ${
           message.role === "user"
-            ? "w-fit max-w-135 rounded-br-sm bg-(--color-on-primary-fixed-variant) px-4 py-3 text-(--color-on-primary-container) "
-            : "w-fit max-w-full rounded-bl-sm border border-(--color-surface-container-high) bg-(--color-surface-container) px-4 py-4 text-(--color-on-surface)"
+            ? "w-fit max-w-135 rounded-br-sm bg-(--color-on-secondary-fixed-variant) px-4 py-3 text-(--color-on-secondary-container) "
+            : "w-fit max-w-full rounded-bl-sm border border-(--color-surface-container-highest) bg-(--color-surface-container-high) px-4 py-4 text-(--color-on-surface)"
         }`}
       >
         {message.role === "model" ? (
@@ -38,7 +38,7 @@ const Message = ({ message }) => {
         )}
       </div>
 
-      <small className="text-[0.7rem] leading-none text-(--color-on-surface-variant) opacity-60">
+      <small className="text-[0.7rem] tracking-wide leading-none text-(--color-on-surface-variant) opacity-75">
         {rawDateData.toLocaleTimeString()} • {rawDateData.toLocaleDateString()}
       </small>
     </div>

@@ -34,7 +34,7 @@ const RegisterModal = () => {
   }
 // bg-(--color-surface-container-lowest)
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-(--color-surface-container-lowest) lg:p-4">
+    <div className="fixed inset-0 z-50 lg:p-4 flex items-center justify-center bg-[linear-gradient(343deg,#4a0e2a_0%,#2c0b3d_20%,#0b0a33_50%,#040407_85%)]">
 
       {/* Modal Box */}
       <div className="grid max-h-[95vh] w-[95%] grid-cols-12 overflow-hidden rounded-lg border border-(--color-surface-container-high) bg-(--color-surface-container-low) shadow-lg sm:w-120 md:w-[95%] lg:w-[95%] xl:w-340">
@@ -91,7 +91,7 @@ const RegisterModal = () => {
                 <h1 className="text-center text-2xl font-bold font-(family-name:--font-heading) text-(--color-on-tertiary-container)">
                   Create an account
                 </h1>
-                <p className="mt-1 text-center text-xs font-(family-name:--font-body) text-(--color-tertiary-container)">
+                <p className="mt-1 text-center text-xs font-(family-name:--font-body) text-(--color-on-tertiary-container) opacity-70">
                   Fill in the details below to create your account
                 </p>
               </div>

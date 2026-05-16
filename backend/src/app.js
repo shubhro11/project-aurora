@@ -10,8 +10,6 @@ const chatRoutes = require("./routes/chat.route");
 const app = express();
 
 /* Middlewares */
-app.use(cookieParser());
-app.use(morgan("dev"))
 app.use(
     cors({
     origin: "http://localhost:5173",
@@ -19,6 +17,8 @@ app.use(
     credentials: true,
   })
 );
+app.use(cookieParser());
+app.use(morgan("dev"))
 app.use(express.json());
 
 /* Using Routes */

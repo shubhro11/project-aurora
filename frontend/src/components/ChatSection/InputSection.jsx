@@ -54,8 +54,9 @@ const InputSection = () => {
   };
 
   return (
-    <div className="flex w-full flex-col items-center justify-center bg-(--color-surface-container-lowest)">
-      <div className="flex w-full flex-col rounded-4xl border border-(--color-surface-container-high) bg-(--color-surface-container) p-2 transition-colors duration-200">
+    <div className="flex w-full flex-col  items-center justify-center">
+
+      <div className="flex w-full flex-col rounded-4xl border border-(--color-surface-container-highest) bg-(--color-surface-container) p-2 transition-colors duration-200">
         {/* Input row */}
 
         <div className="flex w-full items-end gap-2">

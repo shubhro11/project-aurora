@@ -35,7 +35,7 @@ const LoginModal = () => {
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-(--color-surface-container-lowest) lg:p-4">
+    <div className="fixed inset-0 z-50 lg:p-4 flex items-center justify-center bg-[linear-gradient(343deg,#4a0e2a_0%,#2c0b3d_20%,#0b0a33_50%,#040407_85%)]">
 
       {/* Modal Box */}
       <div className="grid max-h-[95vh] w-[95%] grid-cols-12 overflow-hidden rounded-lg border border-(--color-surface-container-high) bg-(--color-surface-container-low) shadow-xl sm:w-120 md:w-[95%] lg:w-[95%] xl:w-340">
@@ -91,7 +91,7 @@ const LoginModal = () => {
                 <h1 className="text-center font-(family-name:--font-heading) text-2xl font-bold text-(--color-on-tertiary-container) transition-colors duration-200">
                   Welcome Back
                 </h1>
-                <p className="mt-1 text-center font-(family-name:--font-body) text-xs text-(--color-tertiary-container)">
+                <p className="mt-1 text-center font-(family-name:--font-body) text-xs text-(--color-on-tertiary-container) opacity-70">
                   Please login to your account
                 </p>
               </div>
