@@ -1,0 +1,1 @@
+import{p as a,j as i,N as u}from"./index-CfVMutTH.js";const c=({children:t})=>{const{isAuthenticated:e,isInitialized:s,user:o}=a(r=>r.auth);return s?e?i.jsx(u,{to:"/chat",replace:!0}):t:null};export{c as default};

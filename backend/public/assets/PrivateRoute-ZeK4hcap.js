@@ -1,0 +1,1 @@
+import{p as r,j as s,N as o}from"./index-CfVMutTH.js";const n=({children:t})=>{const{isAuthenticated:e,isInitialized:a}=r(i=>i.auth);return a?e?t:s.jsx(o,{to:"/login",replace:!0}):null};export{n as default};
